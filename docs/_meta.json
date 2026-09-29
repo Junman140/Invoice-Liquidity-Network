@@ -22,6 +22,7 @@
   "sdk-quickstart": "SDK Quickstart",
   "sdk-api-reference": "SDK API Reference",
   "sdk-trust-model": "SDK Trust Model",
+  "sdk-trust-model-cross-repo": "SDK Trust Model Cross-Repo Links",
   "sdk-e2e": "SDK End-to-End Testing",
   "sdk-migration-guide": "SDK Migration Guide",
   "sdk-next-migration": "SDK vs SDK-next",
@@ -59,7 +60,7 @@
   },
   "governance-guide": "Governance Guide",
   "reputation": "Reputation System",
-  "trust-liquidity-model": "Trust & Liquidity Model"
+  "trust-liquidity-model": "Trust & Liquidity Model",
   "-- Operations --": {
     "type": "separator",
     "title": "Operations"
@@ -67,6 +68,7 @@
   "mainnet-launch-checklist": "Mainnet Launch Checklist",
   "mainnet-deployment-dry-run": "Mainnet Deployment Dry Run",
   "emergency-pause-rehearsal": "Emergency Pause Rehearsal",
+  "incident-response": "Incident Response Runbook",
   "monitoring": "Monitoring",
   "community-announcement": "Community Announcement",
   "deployment": "Deployment",
@@ -75,6 +77,7 @@
   "migrations": "Database Migrations",
   "scripts": "Scripts Reference",
   "ci-cd": "CI/CD",
+  "ci-duration-cost-audit": "CI Duration & Cost Audit",
   "analytics": "Analytics",
   "mutation-testing": "Mutation Testing",
   "monorepo-map": "Monorepo Map",
@@ -87,7 +90,7 @@
   "load-test-harness": "Load Test Harness",
   "test-runtime-budgets": "Test Runtime Budgets",
   "sdk-integration-fixture-audit": "SDK Integration Fixture Audit",
-  "cli-function-level-audit": "CLI Function-Level Audit"
+  "cli-function-level-audit": "CLI Function-Level Audit",
   "-- Contributing --": {
     "type": "separator",
     "title": "Contributing"
@@ -96,6 +99,7 @@
   "cross-repo-sync": "Cross-Repo Sync",
   "cross-repo-dependencies": "Cross-Repo Dependencies",
   "branch-protection": "Branch Protection",
+  "auditor-onboarding": "External Auditor Onboarding Package",
   "hardening-batch-coordination": "Hardening Batch Coordination",
   "project-board": "Project Board",
   "-- Reference --": {
@@ -112,6 +116,7 @@
   "vulnerability-disclosure": "Vulnerability Disclosure",
   "scf-technical-narrative": "SCF Technical Narrative",
   "secrets-baseline-audit": "Secrets Baseline Audit",
+  "security-audit-report": "Security Audit Report",
   "privacy": "Privacy & Data Retention",
   "next.config": "Next Config",
   "theme.config": "Theme Config"

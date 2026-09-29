@@ -124,7 +124,7 @@ The `.github/workflows/coordinate-release.yml` workflow automates this process.
 
 ### Triggering a Release
 
-1. Go to the main repository: [Invoice-Liquidity-Network](https://github.com/Songu3020/Invoice-Liquidity-Network)
+1. Go to the main repository: [Invoice-Liquidity-Network](https://github.com/Invoice-Liquidity-Network/Invoice-Liquidity-Network)
 2. Navigate to **Actions** → **Coordinate Cross-Repo Release**
 3. Click **Run workflow**
 4. Fill in the required inputs:

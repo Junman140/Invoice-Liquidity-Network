@@ -7,6 +7,14 @@ This policy defines the unified security and vulnerability disclosure policy for
 
 This unified policy ensures consistent severity classification, private disclosure channels, safe-harbour commitments, and response timelines across all ILN components.
 
+## SDK Trust Model (required reading)
+
+The SDK is a thin transaction builder: it validates address format and signer identity, then delegates key custody and network verification to Freighter (or your signer) and to Soroban RPC. Integrators and security reviewers should read the full trust boundaries, threat model, and key-management guidance here:
+
+- **[SDK Trust Model](./docs/sdk-trust-model.md)** — what the SDK checks, what it does not, and how browser Freighter signing fits the trust chain
+
+Sibling repositories should link the same document from their `SECURITY.md` files (wallet UX in the frontend; authorization assumptions in the contracts). See [SCF Technical Narrative](./docs/scf-technical-narrative.md#security-documentation-map) for the cross-repo security documentation map.
+
 ## Supported Versions
 
 Security fixes are provided for the latest major version of each maintained ILN component. Pre-mainnet deployments are treated as test environments and must not be used with real funds unless the release notes explicitly say otherwise.

@@ -4,6 +4,14 @@
 > how to report, vulnerability classes, severity, and response timelines — now lives in the
 > repository root [`SECURITY.md`](../SECURITY.md).
 
+## SDK trust model
+
+For integrator-facing trust boundaries, Freighter signing assumptions, and what the SDK
+does **not** guarantee, see the **[SDK Trust Model](./sdk-trust-model.md)**. This is the
+primary security narrative for `@iln/sdk` / `@invoice-liquidity/sdk` and is linked from
+root [`SECURITY.md`](../SECURITY.md), the [SCF Technical Narrative](./scf-technical-narrative.md),
+and (by design) the frontend and smart-contract repos' `SECURITY.md` files.
+
 For broader security practices (integrator guidance, node-operator hardening, package
 provenance verification, audit information, and general incident response), see the
 [Security Guide](./security-guide.md).

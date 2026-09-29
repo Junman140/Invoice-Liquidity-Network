@@ -22,6 +22,7 @@ jobs:
         uses: ./.github/actions/setup-pnpm
         with:
           install-args: --frozen-lockfile --ignore-scripts
+      # Same commitlint.config.js as commit-message lint — keep CONTRIBUTING.md in sync.
       - name: Lint PR title
         run: |
           echo "${{ github.event.pull_request.title }}" > pr_title

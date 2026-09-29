@@ -10,6 +10,7 @@
 
       window.__ilnReady = false;
       window.__ilnError = null;
+      window.__ilnWalletHarnessReady = false;
 
       try {
         const bytes = randomBytes(32);
@@ -20,6 +21,53 @@
       } catch (err) {
         window.__ilnError = err.message;
       }
+
+      /**
+       * Freighter-shaped InvoiceTransactionSigner harness.
+       * Mirrors the option contract used by InvoiceClient and @iln/sdk's
+       * createFreighterSigner so browser tests catch signing-path drift.
+       */
+      const calls = [];
+      let account = 'GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWHF';
+
+      const freighterShapedSigner = {
+        async getPublicKey() {
+          return account;
+        },
+        async signTransaction(transactionXdr, options) {
+          if (!options?.networkPassphrase) {
+            throw new Error('networkPassphrase is required for Freighter-shaped signing');
+          }
+          if (!options?.address) {
+            throw new Error('address is required for Freighter-shaped signing');
+          }
+          calls.push({
+            method: 'signTransaction',
+            args: [transactionXdr, options],
+          });
+          return `SIGNED:${transactionXdr}`;
+        },
+      };
+
+      window.__ilnWalletHarness = {
+        reset() {
+          calls.length = 0;
+          account = 'GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWHF';
+        },
+        setAccount(next) {
+          account = next;
+        },
+        getCalls() {
+          return [...calls];
+        },
+        getPublicKey() {
+          return freighterShapedSigner.getPublicKey();
+        },
+        signWithFreighterShape(xdr, options) {
+          return freighterShapedSigner.signTransaction(xdr, options);
+        },
+      };
+      window.__ilnWalletHarnessReady = true;
     </script>
   </body>
 </html>
